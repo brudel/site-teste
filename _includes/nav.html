@@ -1,0 +1,14 @@
+<nav>
+  <div class="row extremes">
+    <span class="title">{ <a href="/">{{ site.name }}</a> }</span>
+  </div>
+  <ul>
+    {% for item in site.data.navigation %}
+    <li>
+      <a {% if page.url == item.link %} aria-current="page" {% endif %} href="{{ item.link }}">
+        {{ item.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

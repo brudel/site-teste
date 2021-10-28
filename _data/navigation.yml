@@ -1,0 +1,6 @@
+- name: main
+  link: /
+- name: projects
+  link: /projects/
+- name: interests
+  link: /interests/

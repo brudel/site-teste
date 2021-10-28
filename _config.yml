@@ -1,0 +1,10 @@
+include: [".well-known"]
+
+description: "My personal website and projects"
+
+collections:
+  notes:
+    output: true
+    permalink: /:collection/:categories/:name:output_ext
+
+name: "Bruno Del Monde"

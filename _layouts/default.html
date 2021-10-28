@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Cache-control" content="public">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.url != "/" %}{{ page.title }} - {% endif %}{{ site.name }}</title>
+    <link rel="canonical" href="https://misterio.me{{ page.url }}" />
+    <meta
+      name="description"
+      content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+    />
+    {% if page.noindex == true %} <meta name="robots" content="noindex"> {% endif %}
+    <link rel="stylesheet" href="/assets/style/water.css" />
+    <link rel="stylesheet" href="/assets/style/style.css" />
+    <link rel="preload" href="/assets/fonts/FiraSans/Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/FiraSans/Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/FiraSans/Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/FiraSans/BoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+      @font-face {
+        font-family: 'Fira Sans';
+        font-style: normal;
+        font-weight: normal;
+        src: url('/assets/fonts/FiraSans/Regular.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Fira Sans';
+        font-style: italic;
+        font-weight: normal;
+        src: url('/assets/fonts/FiraSans/Italic.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Fira Sans';
+        font-style: normal;
+        font-weight: bold;
+        src: url('/assets/fonts/FiraSans/Bold.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Fira Sans';
+        font-style: italic;
+        font-weight: bold;
+        src: url('/assets/fonts/FiraSans/BoldItalic.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Fira Code';
+        font-style: normal;
+        font-weight: normal;
+        src: url('/assets/fonts/FiraCode/Regular.woff2') format('woff2');
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+    {% include nav.html %}
+    </header>
+    <main>{{ content }}</main>
+    {% include footer.html %}
+  </body>
+</html>
