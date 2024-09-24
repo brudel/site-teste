@@ -56,47 +56,7 @@
     </style>
   </head>
   <body>
-    <aside class="mebar">
-      <figure class="author__avatar">
-        <img src="/assets/images/me.jpg" alt="{{ site.name }}" class="perfil-img">
-      </figure>
-      <article>
-        <section class="author__content">
-          <span class="title"> <h6>{ <a href="/">{{ site.name }}</a> }</h6> </span>
-          <!--<p class="author__bio" itemprop="description">
-            Text description about my interesting life
-          </p>*/-->
-        </section>
-        <address>
-          <ul>
-            <li>
-              <a href="https://github.com/brudel/" target="_blank">
-              {% include icons/simple-icons/github.svg %}
-              GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/brudel/" target="_blank">
-                {% include icons/simple-icons/linkedin.svg %}
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://t.me/brudel" target="_blank">
-                {% include icons/simple-icons/telegram.svg %}
-                Telegram
-              </a>
-            </li>
-            <li>
-              <a href="mailto:me@brudel.dev" target="_blank">
-                {% include icons/simple-icons/email.svg %}
-                me@brudel.dev
-              </a>
-            </li>
-          </ul>
-        </address>
-      </article>
-    </aside>
+    {% include aside.html %}
     <header>
     {% include nav.html %}
     </header>
