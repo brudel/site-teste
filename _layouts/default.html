@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% if page.url != "/" %}{{ page.title }} - {% endif %}{{ site.name }}</title>
-    <link rel="canonical" href="https://misterio.me{{ page.url }}" />
+    <link rel="canonical" href="https://brudel.dev{{ page.url }}" />
     <meta
       name="description"
       content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
@@ -13,6 +13,7 @@
     {% if page.noindex == true %} <meta name="robots" content="noindex"> {% endif %}
     <link rel="stylesheet" href="/assets/style/water.css" />
     <link rel="stylesheet" href="/assets/style/style.css" />
+    <link rel="stylesheet" href="/assets/style/brudel.css" />
     <link rel="preload" href="/assets/fonts/FiraSans/Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/FiraSans/Italic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/FiraSans/Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -55,6 +56,47 @@
     </style>
   </head>
   <body>
+    <aside class="mebar">
+      <figure class="author__avatar">
+        <img src="/assets/images/me.jpg" alt="{{ site.name }}" class="perfil-img">
+      </figure>
+      <article>
+        <section class="author__content">
+          <span class="title"> <h6>{ <a href="/">{{ site.name }}</a> }</h6> </span>
+          <!--<p class="author__bio" itemprop="description">
+            Text description about my interesting life
+          </p>*/-->
+        </section>
+        <address>
+          <ul>
+            <li>
+              <a href="https://github.com/brudel/" target="_blank">
+              {% include icons/simple-icons/github.svg %}
+              GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/brudel/" target="_blank">
+                {% include icons/simple-icons/linkedin.svg %}
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/brudel" target="_blank">
+                {% include icons/simple-icons/telegram.svg %}
+                Telegram
+              </a>
+            </li>
+            <li>
+              <a href="mailto:me@brudel.dev" target="_blank">
+                {% include icons/simple-icons/email.svg %}
+                me@brudel.dev
+              </a>
+            </li>
+          </ul>
+        </address>
+      </article>
+    </aside>
     <header>
     {% include nav.html %}
     </header>

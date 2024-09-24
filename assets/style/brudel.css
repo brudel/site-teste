@@ -1,0 +1,90 @@
+
+/* Correct old */
+body {
+	max-width: unset;
+	padding: unset;
+}
+
+.perfil-img {
+	height: 150px;
+	width: 120px;
+	object-fit: cover;
+	border-radius: 50%;
+
+	padding: 5px;
+	border: 1px solid;
+}
+
+.mebar address ul {
+	list-style-type: none;
+	padding: unset;
+}
+
+.mebar svg {
+	vertical-align: -.125em;
+	color: var(--form-text);
+}
+
+@media screen and (min-width: 768px) {
+
+	header, main, footer {
+		margin-left: 25%;
+		width: 50%;
+		max-width: 768px;
+	}
+
+	.mebar {
+		float: left;
+		position: sticky;
+		top: 2em; /*works together with the sticky*/
+		width: 25%;
+		text-align: center;
+	}
+
+	.mebar article {
+		display: inline-block;
+	}
+
+	.mebar address {
+		text-align: left;
+	}
+
+	.mebar h6 {
+		margin: unset;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	header, main, footer {
+		text-align: center;
+	}
+
+	.mebar {
+		display: flex;
+	}
+
+	.mebar section {
+		display: none;
+	}
+
+	.mebar article {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}
+
+
+/* Experimental */
+
+/*
+* { /* https://www.w3schools.com/css/css_rwd_grid.asp * /
+  box-sizing: border-box;
+}*/
+
+/* Main */
+.projects-display { /* for projects */
+	display:  grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+	grid-auto-rows: 100px;
+}

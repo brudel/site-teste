@@ -7,4 +7,5 @@ collections:
     output: true
     permalink: /:collection/:categories/:name:output_ext
 
+host: 0.0.0.0
 name: "Bruno Del Monde"
