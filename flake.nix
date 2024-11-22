@@ -10,7 +10,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let 
         pkgs = import nixpkgs { inherit system; };
-        package = "misterio-me";
+        package = "brudel-dev";
       in {
         packages.${package} = pkgs.stdenv.mkDerivation {
           pname = package;
