@@ -25,8 +25,7 @@
 
         apps.${package} = let
           serve = pkgs.writeShellScriptBin "serve" ''
-            echo "Serving on: http://127.0.0.1:4000"
-            ${pkgs.webfs}/bin/webfsd -f index.html -F -p 4000 -r ${self.packages.${system}.${package}}
+						${pkgs.jekyll}/bin/jekyll serve --livereload --trace
           '';
         in {
           type = "app";
